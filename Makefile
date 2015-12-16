@@ -22,7 +22,7 @@ test: $(TESTS)
 	$(CXX) $(CXX_FLAGS) -o $@ $^ $(TEST_LIBS)
 
 %.o: %.cpp
-	$(CXX) $(CXX_FLAGS) -c $^ $(LIBS)
+	$(CXX) $(CXX_FLAGS) -c $^ -o $@ $(LIBS)
 
 clean:
 	rm -f $(MAIN) $(TESTS) $(OBJECTS)
