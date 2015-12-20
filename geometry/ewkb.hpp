@@ -1,8 +1,8 @@
 // Copyright 2015, Jan Vogt.
 // Author: Jan Vogt <jan.vogt@me.com>
 
-#ifndef MODELS_EWKB_HPP_
-#define MODELS_EWKB_HPP_
+#ifndef GEOMETRY_EWKB_HPP_
+#define GEOMETRY_EWKB_HPP_
 
 #include <iostream>
 #include <algorithm>
@@ -124,4 +124,4 @@ namespace EWKB {
   }
 }
 
-#endif  // MODELS_EWKB_HPP_
+#endif  // GEOMETRY_EWKB_HPP_

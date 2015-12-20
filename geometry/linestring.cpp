@@ -7,12 +7,12 @@
 #include "ewkb.hpp"
 
 // _____________________________________________________________________________
-const std::vector<Point>& Geometry::LineString::vertices() {
+const std::vector<Point>& Geometry::LineString::vertices() const {
   return vertices_;
 }
 
 // _____________________________________________________________________________
-std::string Geometry::LineString::toString() {
+std::string Geometry::LineString::toString() const {
   std::ostringstream os;
   os.precision(12);
   if (hasSrid_) {
@@ -22,7 +22,9 @@ std::string Geometry::LineString::toString() {
   for (Point p : vertices_) {
     os << p.x() << ' ' << p.y() << ',';
   }
-  os.seekp(-1, std::ios_base::cur);
+  if (vertices_.size() > 0) {
+    os.seekp(-1, std::ios_base::cur);
+  }
   os << ')';
   return os.str();
 }
